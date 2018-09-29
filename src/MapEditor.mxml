@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009" 
+					   xmlns:s="library://ns.adobe.com/flex/spark" 
+					   xmlns:mx="library://ns.adobe.com/flex/mx"
+					   showStatusBar="false"
+					   creationComplete="initApp()"
+					   applicationComplete= "appComplete()"
+					   >
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+		
+	</fx:Declarations>
+	<fx:Script source="ui/MapEditorUI.as" />
+	<s:Button id = "_loadMapBtn" width="80" height="30" label="载入地图" click="onClickLoadMap()"/>
+	<s:Button id = "_exportMapBtn" width="80" height="30" label="导出地图" click="onClickExportMap()"/>
+	<s:Label  id = "_positionLabel" text="当前鼠标位置: x：0  y：0" color="0xFFFFFF"  fontSize="20" fontWeight="bold"/>
+	<s:TitleWindow id = "_selectGridTypeWindow" title="" width="60" height="240" x="100" y="100" >
+	</s:TitleWindow>
+	<s:Group  id = "_moveToGroup" x="0" y="60" >
+		<s:layout>  
+			<s:HorizontalLayout  verticalAlign="middle" horizontalAlign="left"/>  
+		</s:layout>
+		<s:Label id = "_moveToLabel1" text="移至:x:" color="0xFFFFFF" fontSize="20" fontWeight="bold" name="_moveToLabel1" mouseEnabled="false"/>
+		<s:TextInput id = "_moveToInputX" width="50" text="0" name="_moveToInputX"/>
+		<s:Label id = "_moveToLabel2" text=" y:" color="0xFFFFFF" fontSize="20" fontWeight="bold" mouseEnabled="false" />
+		<s:TextInput id = "_moveToInputY" width="50" text="0" name="_moveToInputY"/>
+		<s:Button id = "_moveToBtn" width="50" height="20" label="GO!" click="onClickGo()"/>
+	</s:Group>
+	<mx:HScrollBar id="h_bar" width="{this.width}"
+				   minScrollPosition="0" maxScrollPosition="{this.width - 20}"   
+				   lineScrollSize="100" pageScrollSize="100"
+				   scroll="myHScroll(event);"   
+				   repeatDelay="1000" repeatInterval="500" />  
+	<mx:VScrollBar id="v_bar" height="{this.height}" x = "{this.width-10}" 
+				   minScrollPosition="0" maxScrollPosition="{this.height - 20}"   
+				   lineScrollSize="100" pageScrollSize="100"
+				   scroll="myVScroll(event);"   
+				   repeatDelay="1000" repeatInterval="500" /> 
+</s:WindowedApplication>

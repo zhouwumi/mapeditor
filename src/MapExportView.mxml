@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Panel xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		  xmlns:s="library://ns.adobe.com/flex/spark" 
+		  xmlns:mx="library://ns.adobe.com/flex/mx" width="400" height="350" backgroundColor="0xFFFFFF" backgroundAlpha="0.2">
+	<fx:Declarations>  
+		<s:RadioButtonGroup id="radiogroup"/>  
+	</fx:Declarations>
+	<s:layout> 
+		<s:VerticalLayout  horizontalAlign="center"/>  
+	</s:layout>
+	<fx:Script source="ui/MapEditorView.as" />
+	<s:Group  id = "group1" x="0" y="60" height="40">
+		<s:layout>  
+			<s:HorizontalLayout  verticalAlign="middle" horizontalAlign="center"/>  
+		</s:layout>
+		<s:Label id = "group1_scene_id_label_name" text="ID:" color="0x000000" fontSize="15" fontWeight="bold" name="group1_scene_id_label"/>
+		<s:TextInput id = "group1_scene_id_label_value" text="0" color="0x000000" fontSize="15" fontWeight="bold" name="group1_scene_id_label_value"/>
+	</s:Group>
+	<s:Group  id = "group2" x="0" y="60" height="40">
+		<s:layout>  
+			<s:HorizontalLayout  verticalAlign="middle" horizontalAlign="center"/>  
+		</s:layout>
+		<s:Label id = "group2_scene_name_label_name" text="NAME:" color="0x000000" fontSize="15" fontWeight="bold" name="group2_scene_name_label_name"/>
+		<s:TextInput id = "group2_scene_name_label_value" text="" color="0x000000" fontSize="15" fontWeight="bold" name="group2_scene_name_label_value"/>
+	</s:Group>
+	<s:Group  id = "group3" x="0" y="100" height="40">
+		<s:layout>  
+			<s:HorizontalLayout  verticalAlign="middle" horizontalAlign="center"/>  
+		</s:layout>
+		<s:Label id = "group3_scene_splice_wdith_name" text="切图WIDTH:" color="0x000000" fontSize="15" fontWeight="bold" name="group3_scene_splice_wdith"/>
+		<s:TextInput id = "group3_scene_splice_wdith_value" text="256" color="0x000000" fontSize="15" fontWeight="bold" name="group3_scene_splice_wdith_value"/>
+	</s:Group>
+	<s:Group  id = "group4" x="0" y="140" height="40">
+		<s:layout>  
+			<s:HorizontalLayout  verticalAlign="middle" horizontalAlign="center"/>  
+		</s:layout>
+		<s:Label id = "group4_scene_splice_wdith_name" text="切图HEIGTH:" color="0x000000" fontSize="15" fontWeight="bold" name="group4_scene_splice_wdith_name"/>
+		<s:TextInput id = "group4_scene_splice_wdith_value" text="256" color="0x000000" fontSize="15" fontWeight="bold" name="group4_scene_splice_wdith_value"/>
+	</s:Group>
+	
+	<s:Group  id = "group6" x="0" y="180" height="40">
+		<s:layout>  
+			<s:HorizontalLayout  verticalAlign="middle" horizontalAlign="center"/>  
+		</s:layout>
+		<s:Label id = "group6_name" text="设置品质:" color="0x000000" fontSize="15" fontWeight="bold" name="group6_name"/>
+		<s:TextInput id = "group6_value" text="50" color="0x000000" fontSize="15" fontWeight="bold" name="group6_value"/>
+	</s:Group>
+	
+	<s:Group  id = "group5" x="0" y="180" height="40">
+		<s:layout>  
+			<s:HorizontalLayout  verticalAlign="middle" horizontalAlign="center"/>  
+		</s:layout>
+		<s:RadioButton label="png" groupName="radiogroup" fontSize="15" color="0x000000"/>  
+		<s:RadioButton label="jpg" groupName="radiogroup" selected="true" fontSize="15" color="0x000000"/>  
+	</s:Group>
+	
+	<s:Group  id = "group7" x="0" y="200" height="40">
+		<s:layout>  
+			<s:HorizontalLayout  verticalAlign="middle" horizontalAlign="center"/>  
+		</s:layout>
+		<s:Button id = "cancelBtn" width="80" height="30" label="取消" click="onClickCancel()" color="0x000000"/>
+		<s:Button id = "yesBtn" width="80" height="30" label="确定" click="onClickOK()" color="0x000000"/>
+	</s:Group>
+	
+</s:Panel>
